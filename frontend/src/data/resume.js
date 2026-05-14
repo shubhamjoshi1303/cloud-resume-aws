@@ -97,6 +97,6 @@ export const resume = {
     "Languages: Python, C, SQL | ML: PyTorch, scikit-learn, XGBoost, SARIMAX, Node2Vec | Cloud: AWS (EC2, Lambda, S3, DynamoDB, RDS, ALB, Route 53, IAM, CloudWatch) | Tools: Docker, Git, Linux, REST APIs, React",
   activities: [
     "Prepared and presented research papers on advanced CS topics; facilitated peer Q&A to clarify complex concepts.",
-    "Member, Syracuse Kendo Club; Also participated in Intramural Soccer."
+    "Member, Syracuse Kendo Club; Also kinda participated in Intramural Soccer."
   ]
 };
