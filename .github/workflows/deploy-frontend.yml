@@ -1,6 +1,7 @@
 name: Deploy Frontend
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -23,11 +24,27 @@ jobs:
 
     defaults:
       run:
+        shell: bash
         working-directory: frontend
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+
+      - name: Debug repository variables
+        run: |
+          echo "AWS_REGION=${AWS_REGION}"
+          echo "S3_BUCKET_NAME=${S3_BUCKET_NAME}"
+          echo "CLOUDFRONT_DISTRIBUTION_ID=${CLOUDFRONT_DISTRIBUTION_ID}"
+          echo "Current directory: $(pwd)"
+          test -f package-lock.json
+
+      - name: Validate deployment variables
+        run: |
+          set -euo pipefail
+          : "${S3_BUCKET_NAME:?S3_BUCKET_NAME repository variable is empty or missing}"
+          : "${CLOUDFRONT_DISTRIBUTION_ID:?CLOUDFRONT_DISTRIBUTION_ID repository variable is empty or missing}"
+          : "${AWS_REGION:?AWS_REGION is empty or missing}"
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -48,8 +65,11 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
 
+      - name: Debug AWS identity
+        run: aws sts get-caller-identity
+
       - name: Sync frontend assets to S3
-        run: aws s3 sync dist/ s3://${S3_BUCKET_NAME} --delete
+        run: aws s3 sync dist/ "s3://${S3_BUCKET_NAME}" --delete
 
       - name: Invalidate CloudFront cache
-        run: aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" --paths "/*"
