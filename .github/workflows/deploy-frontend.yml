@@ -17,6 +17,7 @@ env:
   AWS_REGION: us-east-1
   S3_BUCKET_NAME: cloud-resume-prod-frontend-assets
   CLOUDFRONT_DISTRIBUTION_ID: E2U1XLQX15BO40
+  VITE_VISITOR_API_URL: https://yf4ysqb036.execute-api.us-east-1.amazonaws.com
 
 jobs:
   deploy:
