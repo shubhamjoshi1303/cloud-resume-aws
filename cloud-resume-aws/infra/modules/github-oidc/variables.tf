@@ -3,13 +3,22 @@ variable "project_name" {
   type        = string
 }
 
-variable "github_repository" {
+variable "environment" {
+  description = "Deployment environment name."
+  type        = string
+}
+
+variable "github_repo" {
   description = "GitHub repository in owner/name format allowed to assume the role."
   type        = string
 }
 
-variable "tags" {
-  description = "Common tags applied to AWS resources."
-  type        = map(string)
-  default     = {}
+variable "s3_bucket_name" {
+  description = "Frontend S3 bucket name used for deployment."
+  type        = string
+}
+
+variable "cloudfront_distribution_arn" {
+  description = "CloudFront distribution ARN allowed for invalidations."
+  type        = string
 }
