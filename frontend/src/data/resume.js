@@ -78,7 +78,7 @@ export const resume = {
   title:
     "Cloud Resume Challenge | AWS, Terraform, CI/CD",
   date: "January 2026",
-  href: "https://resume.shubhamjoshi.xyz/",
+  href: "https://github.com/shubhamjoshi1303/cloud-resume-aws",
   bullets: [
     "Built a serverless cloud-native portfolio platform using React, AWS Lambda, API Gateway, DynamoDB, S3, and CloudFront with a visitor tracking API and private S3 hosting through Origin Access Control (OAC).",
     "Implemented CI/CD and infrastructure-as-code workflows using Terraform, GitHub Actions, and OIDC federation to automate secure AWS deployments."
