@@ -45,9 +45,9 @@ export const resume = {
       title: "Cloud Research Intern | ECS, Syracuse University, Syracuse, NY",
       date: "July 2025 - Present",
       bullets: [
-        "Engineered a serverless Gen AI RAG chatbot assistant using React, API Gateway, AWS Lambda, and Amazon Bedrock to deliver grounded natural language responses from custom knowledge base documents.",
-        "Architected a Retrieval-Augmented Generation (RAG) pipeline leveraging Bedrock Knowledge Bases, Titan Embeddings, S3 Vectors, Amazon Nova Micro, and application-layer guardrails for context-aware and responsible AI response generation.",
-        "Developed CI/CD and infrastructure-as-code workflows using GitHub Actions and Terraform to automate serverless deployments and maintain reproducible AWS environments."
+        "Engineered a serverless GenAI RAG assistant using React, API Gateway, AWS Lambda, and Amazon Bedrock to deliver grounded natural language responses from custom knowledge base documents.",
+        "Architected a scalable retrieval pipeline leveraging Bedrock Knowledge Bases, Titan embeddings, vector search, and application-layer guardrails to improve contextual relevance and response reliability.",
+        "Developed CI/CD and infrastructure-as-code workflows using GitHub Actions and Terraform, reducing deployment time by ~75% and enabling reproducible serverless AWS environments."
       ]
     }
   ],
@@ -59,7 +59,7 @@ export const resume = {
   href: "https://movie.shubhamjoshi.xyz/",
   bullets: [
     "Built and deployed a graph-based movie recommender using Neo4j, Node2Vec, FastAPI, React, Docker, and AWS cloud infrastructure to generate personalized recommendations from ~7.5GB of IMDb relationship data.",
-    "Generated 128-dimensional embeddings for 160K+ graph nodes using Neo4j Graph Data Science and engineered a cosine similarity recommendation engine for graph-aware movie recommendations.",
+    "Generated 128-dimensional embeddings for 160K+ graph nodes using Neo4j Graph Data Science and engineered a cosine similarity recommendation engine for personalized graph-based recommendations.",
     "Deployed a cloud-hosted recommendation platform using EC2, Docker, Nginx, S3, CloudFront, and Route53."
   ]
 },
@@ -69,9 +69,9 @@ export const resume = {
   date: "March 2026",
   href: "https://shop.shubhamjoshi.xyz/",
   bullets: [
-    "Developed a cloud-native e-commerce platform using React, FastAPI, Docker, ECS Fargate, API Gateway, Cognito, DynamoDB, and PostgreSQL.",
-    "Architected a distributed microservices backend with ECS Fargate, ALB, VPC networking, and JWT-based Cognito authentication for scalable cloud deployment.",
-    "Deployed a React frontend on CloudFront with S3 OAC, subdomain routing and HTTPS using Route53 and ACM."
+    "Built and deployed a cloud-native e-commerce platform using React, FastAPI, Docker, ECS Fargate, DynamoDB, and PostgreSQL to support scalable product catalog and order management workflows.",
+    "Designed a distributed microservices architecture with ECS Fargate, API Gateway, ALB, and Cognito-based JWT authentication to enable secure, horizontally scalable backend services.",
+    "Deployed a globally accessible frontend using CloudFront, Route53, ACM, and private S3 hosting for secure content delivery."
   ]
 },
 {
@@ -81,7 +81,7 @@ export const resume = {
   href: "https://github.com/shubhamjoshi1303/cloud-resume-aws",
   bullets: [
     "Built a serverless cloud-native portfolio platform using React, AWS Lambda, API Gateway, DynamoDB, S3, and CloudFront with a visitor tracking API and private S3 hosting through Origin Access Control (OAC).",
-    "Implemented CI/CD and infrastructure-as-code workflows using Terraform, GitHub Actions, and OIDC federation to automate secure AWS deployments."
+    "Implemented Terraform-based CI/CD workflows with GitHub Actions and OIDC federation to automate secure AWS deployments and reduce manual infrastructure provisioning."
   ]
 },
 {
@@ -91,7 +91,7 @@ export const resume = {
   href: "https://github.com/shubhamjoshi1303/Electricity-Price-Forecasting-at-NP-15-Northern-California-",
   bullets: [
     "Developed a hybrid electricity price forecasting pipeline combining SARIMAX and Gradient Boosting to predict CAISO NP-15 market prices using solar, wind, and temperature datasets.",
-    "Achieved a 15-day forecasting MAE of 16.79 by modeling seasonal time-series behavior and refining non-linear residual errors through hybrid statistical and machine learning techniques."
+    "Achieved a 15-day forecasting MAE of 16.79 by modeling seasonal trends and refining non-linear residual errors through hybrid statistical and machine learning techniques."
   ]
 }
 
